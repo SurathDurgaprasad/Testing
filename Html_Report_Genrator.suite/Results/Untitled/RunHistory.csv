@@ -1,0 +1,5 @@
+﻿Date Run,Status,Time,# of Errors,# of Warnings,# of Exceptions,Log File,Return Value,Error Message,# of Successes
+2022-12-12 14:58:09.931 +0530,"Success",0:00:00,0,0,0,"20221212_145809.931/LogFile.txt","","",1
+2022-12-12 15:07:24.393 +0530,"Success",0:00:00,0,0,0,"20221212_150724.393/LogFile.txt","","",1
+2022-12-12 15:12:17.696 +0530,"Success",0:00:00,0,0,0,"20221212_151217.696/LogFile.txt","","",1
+2022-12-12 15:17:53.207 +0530,"Success",0:00:00,0,0,0,"20221212_151753.207/LogFile.txt","","",1

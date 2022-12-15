@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+ <testsuite name="Untitled_script" package="Html_Report_Genrator.suite" timestamp="2022-12-12 15:07:24.393 +0530"
+ tests="1"  failures="0" errors="0" time="0.294000">
+  <properties>
+   <property name="RunDate" value="2022-12-12 15:07:24.393 +0530"/>
+   <property name="Status" value="Success"/>
+  </properties>
+  <testcase name="Untitled.script" assertions="1" status="success"  time="0.281">
+  </testcase>
+ </testsuite>
+</testsuites>

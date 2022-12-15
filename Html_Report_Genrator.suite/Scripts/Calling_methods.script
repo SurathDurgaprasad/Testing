@@ -1,0 +1,43 @@
+﻿to handle launcApplication
+	//Parabank_methods.runStandaloneBatFile "C:/StandAlone/RunSeleniumServer.bat"
+	Parabank_methods.establishConnection "https://parabank.parasoft.com/parabank/index.htm"
+	Parabank_methods.screenshot "1"
+	Parabank_methods.maximizeWindow
+	wait 2
+	Parabank_methods.screenshot "2"
+end launcApplication
+
+to handle adduser
+	Log "Adding user in parabank --TODO"
+	Parabank_methods.screenshot "3"
+end adduser
+
+to handle deleteuser
+	Log "Deleting user in parabank -- TODO"
+	Parabank_methods.screenshot "4"
+end deleteuser
+
+to handle userinfo
+	Log "User Info in parabank -- TODO"
+	Parabank_methods.screenshot "5"
+end userinfo
+
+to handle logout
+	Log "Logou from parabank -- TODO"
+	Parabank_methods.screenshot "6"
+end logout
+
+to handle usernameenter
+	Parabank_methods.enterValueInaField "name","username","User1"
+	Parabank_methods.screenshot "7"
+end usernameenter
+
+to handle passwordenter
+	Parabank_methods.enterValueInaField "name","password","User1"
+	Parabank_methods.screenshot "7"
+end passwordenter
+
+to handle loginbuttonclick
+	Parabank_methods.clickWebElement "Xpath","//*[@id='loginPanel']/form/div[3]/input"
+	Parabank_methods.screenshot "8"
+end loginbuttonclick

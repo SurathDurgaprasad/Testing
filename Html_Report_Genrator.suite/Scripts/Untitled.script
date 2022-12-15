@@ -1,0 +1,12 @@
+﻿put "client:dai:agent:integration" into clientId
+put "b67c48ce-cf8b-4963-8f33-d9f239227d22" into clientSecret //ENTER YOUR SECRET ID HERE
+put "surath" into username //Enter your AI username here
+put "Ideabytes@123" into password //Enter your AI password here
+put "http://localhost:8000/auth/realms/eggplant/protocol/openid-connect/token" into authUrl// Post the credentials to the auth server. This will return the access token
+put {grant_type: "client_credentials", username: username, password: password, client_id: clientId, client_secret:clientSecret} into postData
+post postData to url authUrl// Access the resource using the access token
+put the access_token of the JSONValue of it into Global accessToken
+put the refresh_token of the JSONValue of it into Global refreshToken
+log "AccessToken" && Global accessToken
+//log Global refreshToken
+

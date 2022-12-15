@@ -1,0 +1,71 @@
+﻿to handle runStandaloneBatFile batFilePath,SUT
+	if SUT is not empty then 
+		TypeText windowsKey,"r"
+		TypeText batFilePath,return
+	else 
+		shell "C:\Windows\System32\cmd.exe /c &&"&batFilePath
+	end if 
+	wait 15
+end runStandaloneBatFile
+
+to handle establishConnection Url
+	put webDriver (host:ConnectionInfo().ServerID, browser: "chrome", port: "4444", url:url) into driver	
+end establishConnection
+
+to handle maximizeWindow 
+	set the webDriver's windowSize to max
+end maximizeWindow
+
+to handle minimizeWindow 
+	set the webDriver's windowSize to min
+end minimizeWindow
+
+to handle clickWebElement webElement,value
+	if webElement is "ID" then 
+		Click webID:value
+	else if webElement is "Name" then 
+		Click webName:value
+	else if webElement is "Xpath" then 
+		Click webXpath:value
+	else if webElement is "TagName" then 
+		Click webTagName:value
+	else if webElement is "ClassName" then 
+		Click webClassName:value
+	else if webElement is "LinkText" then 
+		Click webLinkText:value
+	else if webElement is "PartialLinkText" then 
+		Click webPartialLinkText:value
+	end if
+end clickWebElement
+
+to handle waitForAnElement webElement,value
+	if webElement is "ID" then 
+		WaitFor 30, webID:value
+	else if webElement is "Name" then 
+		WaitFor 30, webName:value
+	else if webElement is "Xpath" then 
+		WaitFor 30, webXpath:value
+	else if webElement is "TagName" then 
+		WaitFor 30, webTagName:value
+	else if webElement is "ClassName" then 
+		WaitFor 30, webClassName:value
+	else if webElement is "LinkText" then 
+		WaitFor 30, webLinkText:value
+	else if webElement is "PartialLinkText" then 
+		WaitFor 30, webPartialLinkText:value
+	end if
+end waitForAnElement
+
+to handle enterValueInaField webElement,value,fieldValue
+	clickWebElement {webElement:webElement,value:value}by name
+	wait 0.5
+	SendKeys fieldValue	
+end enterValueInaField
+
+to handle findAllElements
+	findElements{identifierType: "value"}
+end findAllElements
+
+to handle screenshot name
+	webScreenshot name
+end screenshot
